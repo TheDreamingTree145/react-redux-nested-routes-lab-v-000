@@ -8,8 +8,7 @@ const PetsShow = ({ pet }) =>
   </div>;
 
 const mapStateToProps = (state, ownProps) => {
-  const pet = state.pets.find(pet => pet.id === ownProps.match.params.petId)
-
+  const pet = state.pets.find(pet => pet.id == ownProps.match.params.petId)
   if (pet) {
     return { pet }
   } else {
